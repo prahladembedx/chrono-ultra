@@ -398,6 +398,10 @@ Contributions are welcome! Please:
 
 ---
 
+## 📄 License
+
+© PrahladEmbedX---All Rights Reserved.
+
 ## 🙏 Credits
 
 | Resource | Usage |
@@ -412,8 +416,8 @@ Contributions are welcome! Please:
 
 <div align="center">
 
-Built with ❤️ by prahladembedx · Runs on the bare Web Platform
-
+Runs on the bare Web Platform.
+If you ❤️ this, drop a ⭐ on the repo!
 ⭐ **Star this repo** if CHRONO helped you stay focused!
 
 </div>
