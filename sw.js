@@ -1,38 +1,49 @@
-// CHRONO Ultra — Service Worker v2
-const CACHE = 'chrono-ultra-v2';
+/* CHRONO Ultra v2 — Service Worker */
+const CACHE = 'chrono-v2';
 const ASSETS = [
-  '/',
-  '/index.html',
-  'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,400&family=Sora:wght@300;400;600;700&display=swap'
+  './',
+  './index.html',
+  './manifest.json',
 ];
 
+// Install — cache all assets
 self.addEventListener('install', e => {
   e.waitUntil(
-    caches.open(CACHE).then(c => c.addAll(ASSETS)).catch(() => {})
+    caches.open(CACHE)
+      .then(c => c.addAll(ASSETS))
+      .catch(() => {})
   );
   self.skipWaiting();
 });
 
+// Activate — delete old caches
 self.addEventListener('activate', e => {
   e.waitUntil(
     caches.keys().then(keys =>
-      Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))
+      Promise.all(
+        keys.filter(k => k !== CACHE).map(k => caches.delete(k))
+      )
     )
   );
   self.clients.claim();
 });
 
+// Fetch — cache first, then network
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
+  if (!e.request.url.startsWith('http')) return;
+
   e.respondWith(
     caches.match(e.request).then(cached => {
       if (cached) return cached;
-      return fetch(e.request).then(res => {
-        if (!res || res.status !== 200 || res.type === 'opaque') return res;
-        const clone = res.clone();
-        caches.open(CACHE).then(c => c.put(e.request, clone));
-        return res;
-      }).catch(() => cached || new Response('Offline'));
+      return fetch(e.request)
+        .then(res => {
+          if (!res || res.status !== 200 || res.type === 'opaque') return res;
+          const clone = res.clone();
+          caches.open(CACHE).then(c => c.put(e.request, clone));
+          return res;
+        })
+        .catch(() => caches.match('./index.html'));
     })
   );
 });
