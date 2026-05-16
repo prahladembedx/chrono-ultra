@@ -2,17 +2,16 @@
 
 # ⏱ CHRONO Ultra
 
-### A Production-Grade Advanced Clock Web App
+### A Production-Grade Advanced Clock & Productivity Web App
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![PWA](https://img.shields.io/badge/PWA-5A0FC8?style=for-the-badge&logo=pwa&logoColor=white)](https://web.dev/progressive-web-apps/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-**No frameworks. No dependencies. Just pure HTML, CSS & Vanilla JS.**
+**No frameworks. No dependencies. Pure HTML, CSS & Vanilla JS.**
 
-[🌐 Live Demo](https://prahladembedx.github.io/CHRONO-Ultra/) · [📥 Download](#installation) · [🐛 Report Bug](../../issues) · [✨ Request Feature](../../issues)
+[🌐 Live Demo](https://prahladembedx.github.io/CHRONO-Ultra/) · [🐛 Report Bug](../../issues) · [✨ Request Feature](../../issues)
 
 </div>
 
@@ -22,220 +21,203 @@
 
 - [About](#about)
 - [Features](#features)
-- [File Structure](#file-structure)
+- [Screenshots](#screenshots)
 - [Installation](#installation)
+- [File Structure](#file-structure)
 - [Keyboard Shortcuts](#keyboard-shortcuts)
 - [Voice Commands](#voice-commands)
 - [PWA Installation](#pwa-installation)
 - [Browser Support](#browser-support)
-- [Customization](#customization)
-- [How It Works](#how-it-works)
-- [Contributing](#contributing)
+- [Future Improvements](#future-improvements)
 - [License](#license)
 
 ---
 
 ## 🧭 About
 
-**CHRONO Ultra** is a feature-packed, production-grade clock web application built entirely with **vanilla HTML, CSS, and JavaScript** — no frameworks, no libraries, no build tools required. It loads instantly in any modern browser and can be installed as a native app on any device via PWA.
+**CHRONO Ultra** is a feature-rich, production-grade clock and productivity web application built entirely with **vanilla HTML, CSS, and JavaScript**. No frameworks, no libraries, no build tools — just pure web platform.
 
-Designed for power users who want a beautiful, always-on desk clock that also works as a full productivity suite — with alarms, focus timers, world clocks, voice commands, ambient sounds, and more.
+It works instantly in any modern browser and can be installed as a native app on any device via PWA — completely offline.
+
+> Designed for students, working professionals, and anyone who wants a beautiful always-on clock that also doubles as a full productivity suite.
 
 ---
 
 ## ✨ Features
 
-### 🕐 Clock Modes — 3 Types
-| Mode | Description |
-|------|-------------|
-| **Digital** | Neon-styled digital clock with optional glow flicker effect |
-| **Analog** | SVG analog clock with smooth hour/minute/second hands |
-| **Flip** | Retro airport-board style flip animation with CSS 3D transforms |
-
-### 🎨 Visual & Design
-- **Glassmorphism UI** — frosted glass cards with `backdrop-filter: blur()`
-- **6 Neon Accent Themes** — Blue, Pink, Green, Yellow, Purple, Orange
-- **3 Clock Fonts** — Digital/LED (Orbitron), Monospace (Space Mono), Serif (Playfair Display)
-- **Dark / Light Mode** — smooth transition between midnight dark and crisp light themes
-- **Neon Sign Effect** — realistic CSS flicker animation on the digital clock
-- **3D Perspective Tilt** — CSS `perspective` + `rotateX/Y` for immersive depth
-- **Custom Cursor** — glowing circle cursor with click-expand effect
-- **Particle Background** — 140-point canvas starfield, mouse-reactive, theme-color synced
-- **Custom Background Images** — paste any URL, or auto-fetch from Unsplash
+### 🕐 Clock
+- **Digital Mode** — Neon-styled with optional flicker animation
+- **Analog Mode** — Smooth SVG clock with animated hands
+- **12H / 24H Toggle** — With helpful hint for 24h format
+- **Neon Effect** — Realistic CSS flicker on digital display
+- **Tabular Numerals** — No jitter when digits change
 
 ### ⏰ Multiple Alarms
-- Set **unlimited alarms** simultaneously, each with a custom label
-- Each alarm has its **own sound selection**
-- Toggle alarms ON/OFF individually without deleting
-- Auto-dismisses after 2 minutes; visual pulse animation when ringing
-- 5 alarm sounds built-in + custom audio upload
-- Alarm state persists across page refreshes via localStorage
+- Set unlimited alarms with **custom labels**
+- Each alarm has its own **sound selection**
+- Toggle alarms ON/OFF individually
+- 4 built-in alarm sounds + **custom MP3/WAV upload**
+- Browser **notifications** when alarm rings
+- Visual pulse animation on clock card
 
 ### 🍅 Pomodoro Focus Timer
-- Classic **25 / 5 / 15 minute** presets (Focus / Short Break / Long Break)
-- Animated progress bar drains in real time
-- **Streak tracking** — counts consecutive days with completed sessions
-- **Session statistics** — today's count, total sessions, total focus hours
-- **7-day bar chart** visualization built without any charting library
+- 25 / 5 / 15 minute presets
+- Single **Play/Pause** button
+- Animated progress bar
+- **7-day session history** bar chart
+- **Streak tracking** across days
+- Browser notification at session end
 
 ### ⏱ Stopwatch
-- **Millisecond precision** — `HH:MM:SS.mmm` display
-- **Lap recording** with individual split (delta) times
-- Scrollable lap list, newest first
-- Start / Stop / Lap / Reset controls
+- Millisecond precision — `HH:MM:SS.mmm`
+- Single **Start/Pause** toggle button
+- Lap recording with split times
+- Scrollable lap history
 
 ### ⏳ Countdown Timers
-- Add **multiple simultaneous countdown events** (New Year, Birthday, Exam…)
-- Live countdown showing days, hours, minutes, seconds
-- Delete individual countdowns anytime
+- Add multiple event countdowns
+- Live `Xd HH:MM:SS` format
+- Browser notification support
 
 ### 🌍 World Clock
-- **6 cities** updating every second: UTC, New York, London, Tokyo, Dubai, Sydney
-- Displays local date alongside time for each city
-- Easily customizable by editing the `ZONES` array
+- **Search any city or country** in the world
+- Add up to 8 custom time zones
+- 50+ cities pre-loaded (India, USA, Europe, Asia, etc.)
+- Remove individual clocks
 
-### 📅 Calendar
-- Full **monthly mini calendar** with previous/next navigation
-- Today's date highlighted with the active accent color
+### 📅 Calendar with Indian Festivals
+- Full monthly calendar view
+- **Indian festivals highlighted** on dates
+- Tap any date to see festival name
+- Festivals include: Diwali, Holi, Eid, Christmas, Republic Day, Independence Day, Navratri, Chhath Puja, Janmashtami, and 30+ more
+- Navigate months easily
 
-### 🕉️ Pooja & Auspicious Times
-- Calculates **6 Hindu prayer times** using astronomical sunrise/sunset formula
-- Based on your **live geolocation** coordinates
-- Includes: Brahma Muhurta, Pratah Sandhya, Madhyahna, Sayam Sandhya, Pradosh, Nishitha Kaal
-- Currently active time slot is highlighted automatically
-- Pre-calibrated for **Patna, Bihar** (easily changed in code)
+### 🕉️ Auspicious Times
+- 8 daily Hindu auspicious times displayed
+- Includes: Brahma Muhurta, Madhyahna, Pradosh Kaal, Midnight Time, and more
+- Currently active time slot highlighted
 
 ### 🎤 Voice Commands
-Full hands-free control using the Web Speech API. Say naturally:
-
-| Voice Command | Action |
-|---------------|--------|
-| `"Set alarm 7 AM"` | Sets alarm for 7:00 AM |
-| `"Start stopwatch"` | Starts the stopwatch |
-| `"Stop stopwatch"` | Stops the stopwatch |
-| `"Lap"` | Records a stopwatch lap |
-| `"Start focus"` | Starts Pomodoro timer |
-| `"Stop focus"` | Pauses Pomodoro timer |
-| `"What time is it"` | Shows time in a toast popup |
-| `"Fullscreen"` | Enters fullscreen mode |
-| `"Dark mode"` | Switches to dark theme |
-| `"Light mode"` | Switches to light theme |
-| `"Next tab"` | Cycles to next tab |
+- Hands-free control via Web Speech API
+- **Auto-stops after 5 seconds of silence**
+- Supports: set alarm, start/stop stopwatch, start/stop focus, dark mode, fullscreen, and more
 
 ### 📝 Sticky Notes
 - Add unlimited notes with timestamps
-- Responsive masonry-style grid layout
-- Persisted in localStorage
+- Persistent across sessions
 
-### 🎵 Audio Engine — Zero Audio Files
-All sounds generated **programmatically** using the Web Audio API:
+### 💊 Medicine Reminder
+- Add medicines with name and time
+- Browser notification at reminder time
+- Mark as "Taken" with one tap
 
-**5 Alarm Sounds:**
-| Sound | Synthesis Method |
-|-------|-----------------|
-| 🔔 Zen Bell | Sine wave 528Hz → 264Hz decay |
-| ⏰ Mechanical | Square wave 7-pulse burst |
-| 🐦 Bird Song | Oscillating sine with random pitch chirp |
-| 📟 Digital Beep | Triple square-wave at 1000Hz |
-| 🕉️ Hanuman Bell | Triangle wave chord: 528→660→792Hz |
+### 💧 Water Reminder
+- Set interval (30 min to 2 hours)
+- Track 8 glasses daily goal
+- Visual glass tracker
 
-**White Noise / Focus Sounds:**
-| Sound | Audio Filter |
-|-------|-------------|
-| 🌧️ Rain | Bandpass 600Hz + LFO amplitude modulation |
-| 🌊 Ocean | Lowpass 400Hz + slow 0.15Hz LFO swell |
-| 🌲 Forest | Highpass 1200Hz subtle ambient noise |
-| 🔥 Campfire | Lowpass 200Hz + 2Hz LFO crackle |
+### 📖 Study Planner
+- Add subjects with daily time goals
+- Per-subject study timer
+- Progress bar per subject
+- Notification on goal completion
 
-- **Custom Alarm Upload** — load your own MP3/WAV as alarm sound
-- **Master Volume Slider** — global control for all audio
-- **Lo-Fi Radio** — quick-link buttons to YouTube lo-fi/jazz streams
+### 🎵 Audio Engine
+**Ambient Sounds:**
+- 🌧️ Rain · 🌲 Forest · 🕉️ Om Chant
+- 🙏 Ram Chant · 🐦 Birds · 🌅 Morning
+- 🧘 Meditation
 
-### 🏆 Achievements & Gamification
-**8 Unlockable Badges:**
-| Badge | Icon | Unlock Condition |
-|-------|------|-----------------|
-| Early Bird | 🐦 | Set alarm before 6:00 AM |
-| Night Owl | 🦉 | Set alarm after 11:00 PM |
-| Focus Master | 🎯 | Complete 10 Pomodoro sessions |
-| Streak King | 🔥 | Maintain a 7-day streak |
-| Time Lord | ⏱️ | Record 50 stopwatch laps |
-| Punctual | ⚡ | Dismiss alarm within 5 seconds |
-| First Focus | 🍅 | Complete your first Pomodoro |
-| Alarm Setter | ⏰ | Set your first alarm |
+**Focus Frequency Tones:**
+- 40Hz Gamma — Focus & Memory
+- 10Hz Alpha — Relaxed Focus
+- 6Hz Theta — Deep Study
+- 432Hz — Healing & Stress Relief
+- 528Hz Solfeggio — Clarity
+- 963Hz Crown — Higher Mind
 
-### 💬 Daily Quotes
-- 24 curated motivational quotes (including Hindi)
-- Rotates daily — consistent quote all day, fresh one tomorrow
+**Custom Audio:**
+- Upload your own MP3/WAV as alarm sound
 
-### 📱 Mobile Experience
-- **Swipe gestures** — swipe left/right to navigate tabs
-- **Haptic feedback** — vibration on button presses (where supported)
-- **Portrait & Landscape** — layout adapts automatically
-- **Home screen installable** via PWA
+### 🏆 Achievements — 10 Badges
+| Badge | Unlock |
+|-------|--------|
+| 🐦 Early Bird | Alarm before 6 AM |
+| 🦉 Night Owl | Alarm after 11 PM |
+| 🎯 Focus Master | 10 Pomodoros done |
+| 🔥 Streak King | 7-day streak |
+| ⏱️ Time Lord | 50 stopwatch laps |
+| ⚡ Punctual | Dismiss alarm in 5s |
+| 🍅 First Focus | First Pomodoro |
+| ⏰ Alarm Setter | First alarm |
+| 📚 Scholar | Study goal reached |
+| 🏁 Pacer | First lap recorded |
 
-### 🌤️ Smart Integrations
-- **Weather Widget** — local temperature via [Open-Meteo API](https://open-meteo.com/) (free, no API key needed)
-- **Battery Status** — charge % and charging state via Web Battery API
-- **Screen Wake Lock** — prevents display from dimming while app is active
+### 🎨 Design
+- **5 Color Themes** — Blue, Pink, Green, Yellow, Purple
+- **3 Clock Fonts** — Digital/LED, Monospace, Serif
+- **Dark / Light Mode**
+- **Glassmorphism UI** with frosted glass cards
+- **Particle Background** — Mouse-reactive starfield
+- **Custom Background Image** — Paste any URL
+- **Responsive** — Mobile, tablet, desktop
 
-### 💾 Data Persistence (localStorage)
-Remembered across sessions:
-- 12/24h preference, theme color, font selection
-- Dark/Light mode, all toggle states
-- All alarms (with labels and sounds)
-- Sticky notes, stopwatch laps
-- Pomodoro stats, streak, and daily history
-- Countdown timers, volume level, clock mode
+### 📱 Mobile Features
+- **Swipe gestures** — Left/Right to change tabs
+- **Haptic feedback** — Vibration on interactions
+- **Portrait & Landscape** — Auto-adjusting layout
+- **PWA Installable** — Works offline after install
 
-### 📤 Data Management
-- **Export** — download all data as `chrono-backup.json`
-- **Import** — restore from backup JSON
-- **Reset** — wipe all data and start fresh
+### 🌤️ Smart Features
+- **Weather Widget** — Live temperature via Open-Meteo (no API key)
+- **Battery Status** — Charge % and charging state
+- **Screen Wake Lock** — Prevents screen from sleeping
+- **Daily Quote** — Rotating motivational quotes (Hindi + English)
+
+### 💾 Data Management
+- **localStorage** — Everything saved automatically
+- **Export** — Backup all data as JSON
+- **Import** — Restore from backup
+- **Reset** — Clear all data
 
 ---
 
 ## 📁 File Structure
 
 ```
-chrono-ultra/
+CHRONO-Ultra/
 │
-├── index.html        ← Entire app (HTML + CSS + JS in one file)
-├── sw.js             ← Service Worker for PWA offline support
-├── manifest.json     ← PWA manifest (name, icons, shortcuts)
-└── README.md         ← This file
+├── index.html      ← Entire app (HTML + CSS + JS)
+├── sw.js           ← Service Worker (PWA offline)
+├── manifest.json   ← PWA config (install as app)
+└── README.md       ← This file
 ```
-
-> The entire app — all HTML structure, CSS styling, and JS logic — lives inside **one self-contained `index.html`**. No build tools, no `node_modules`, no compilation step whatsoever.
 
 ---
 
 ## 🚀 Installation
 
-### Option 1 — Open Directly
+### Open Directly
 ```bash
-git clone https://github.com/yourusername/chrono-ultra.git
-cd chrono-ultra
-# Double-click index.html or open in browser
+git clone https://github.com/prahladembedx/CHRONO-Ultra.git
+cd CHRONO-Ultra
+# Open index.html in browser
 ```
 
-### Option 2 — Local Dev Server (required for PWA features)
+### Local Server (for PWA features)
 ```bash
-# Python (built-in, no install needed)
+# Python
 python3 -m http.server 8080
 
 # Node.js
 npx serve .
-
-# VS Code: install "Live Server" extension → right-click index.html → Open with Live Server
 ```
-Then open `http://localhost:8080`
+Open `http://localhost:8080`
 
-### Option 3 — Deploy to GitHub Pages (Free)
-1. Fork this repo
-2. Go to **Settings → Pages**
-3. Set Source: **Deploy from branch → main → / (root)**
-4. Live URL: `https://yourusername.github.io/chrono-ultra/`
+### Live Version
+```
+https://prahladembedx.github.io/CHRONO-Ultra/
+```
 
 ---
 
@@ -244,31 +226,57 @@ Then open `http://localhost:8080`
 | Key | Action |
 |-----|--------|
 | `F` | Toggle Fullscreen |
-| `Space` | Start / Pause active timer |
+| `Space` | Play / Pause active timer |
 | `L` | Record Stopwatch Lap |
-| `R` | Reset Pomodoro & Stopwatch |
-| `N` | Focus Notes input box |
+| `R` | Reset timers |
+| `N` | Focus Notes input |
 | `V` | Toggle Voice Commands |
 | `D` | Toggle Dark / Light Mode |
-| `?` | Show / Hide Shortcuts Panel |
-| `Esc` | Dismiss Alarm + Hide Help |
-| `1` – `7` | Jump directly to Tab 1–7 |
+| `?` | Show / Hide Shortcuts |
+| `Esc` | Dismiss Alarm |
+| `1` – `7` | Jump to Tab 1–7 |
+
+---
+
+## 🎤 Voice Commands
+
+| Say | Action |
+|-----|--------|
+| "Set alarm 7 AM" | Sets alarm |
+| "Start stopwatch" | Starts stopwatch |
+| "Stop stopwatch" | Stops stopwatch |
+| "Lap" | Records a lap |
+| "Start focus" | Starts Pomodoro |
+| "Stop focus" | Pauses Pomodoro |
+| "What time" | Shows current time |
+| "Dark mode" | Switches to dark |
+| "Light mode" | Switches to light |
+| "Fullscreen" | Enters fullscreen |
+
+> Voice auto-stops after **5 seconds of silence**
 
 ---
 
 ## 📱 PWA Installation
 
-**Android / Chrome:**
-1. Open in Chrome → tap **⋮ Menu** → "Add to Home Screen" → "Install"
+**Android Chrome:**
+```
+Open link in Chrome
+→ 3 dots ⋮ → Add to Home Screen → Install
+```
 
-**iPhone / Safari:**
-1. Open in Safari → tap **Share ⬆** → "Add to Home Screen"
+**iPhone Safari:**
+```
+Open link in Safari
+→ Share ⬆ → Add to Home Screen → Add
+```
 
-**Desktop / Chrome or Edge:**
-1. Look for the **⊕ install icon** in the address bar
-2. Or: go to ⚙️ Settings tab → tap **"Install CHRONO on Device"**
+**Desktop Chrome/Edge:**
+```
+Look for ⊕ icon in address bar → Install
+```
 
-Once installed, the app works **fully offline**.
+Works fully **offline** after installation.
 
 ---
 
@@ -277,147 +285,85 @@ Once installed, the app works **fully offline**.
 | Feature | Chrome | Edge | Firefox | Safari |
 |---------|--------|------|---------|--------|
 | Core Clock | ✅ | ✅ | ✅ | ✅ |
-| Web Audio API | ✅ | ✅ | ✅ | ✅ |
+| Web Audio | ✅ | ✅ | ✅ | ✅ |
+| Notifications | ✅ | ✅ | ✅ | ✅ |
 | Speech Recognition | ✅ | ✅ | ❌ | ✅ |
-| Wake Lock API | ✅ | ✅ | ✅ | ✅ |
+| Wake Lock | ✅ | ✅ | ✅ | ✅ |
 | Battery API | ✅ | ✅ | ⚠️ | ❌ |
-| Geolocation | ✅ | ✅ | ✅ | ✅ |
-| Fullscreen | ✅ | ✅ | ✅ | ✅ |
-| PWA / Offline | ✅ | ✅ | ⚠️ | ✅ |
+| PWA Install | ✅ | ✅ | ⚠️ | ✅ |
 
 ---
 
-## 🔧 Customization
+## 🔮 Future Improvements
 
-### Change Default Theme
-Edit the `S` state object at the top of the `<script>` block:
-```js
-let S = {
-  theme: 'purple',  // 'blue' | 'pink' | 'green' | 'yellow' | 'purple' | 'orange'
-  font: 'serif',    // 'digital' | 'mono' | 'serif'
-  isDark: false,    // false = light mode
-  is24h: true,
-  // ...
-};
-```
+These features are planned for upcoming versions of CHRONO Ultra:
 
-### Add More World Clock Cities
-```js
-const ZONES = [
-  { city: 'Mumbai',    tz: 'Asia/Kolkata',       flag: '🇮🇳' },
-  { city: 'New York',  tz: 'America/New_York',   flag: '🗽' },
-  { city: 'Paris',     tz: 'Europe/Paris',       flag: '🇫🇷' },
-  // Add any IANA timezone string
-];
-```
+### 🌟 Version 4 — Planned
+- [ ] **Google Calendar Sync** — Import events directly
+- [ ] **Moon Phase Display** — Daily lunar phase on clock
+- [ ] **Sunrise & Sunset Countdown** — Exact times for your location
+- [ ] **More Festival Dates** — 2027 and beyond auto-calculated
+- [ ] **Flip Clock Mode** — Retro airport-style digits
+- [ ] **Multi-language Support** — Hindi, Tamil, Bengali UI
+- [ ] **Widget Mode** — Tiny floating clock widget
+- [ ] **Cloud Sync** — Backup data to Google Drive
+- [ ] **Themes Marketplace** — Community-made color themes
+- [ ] **More Frequency Tones** — Binaural beats library
+- [ ] **ASMR Sounds** — Keyboard typing, page turning, rain on glass
 
-### Change Pooja Prayer Location
-```js
-// In renderPooja() function — replace with your city's coordinates
-const lat = 25.59;   // latitude  (Patna default)
-const lng = 85.14;   // longitude (Patna default)
-// Find yours at: https://www.latlong.net/
-```
-
-### Add More Daily Quotes
-```js
-const QUOTES = [
-  'Your motivational quote here. — Author',
-  'अपना quote Hindi mein bhi likh sakte ho।',
-  // Rotates daily by date index
-];
-```
-
-### Adjust Particle Density
-```js
-// In initPts() function:
-const n = Math.min(200, Math.floor(cvs.width * cvs.height / 5000));
-// Smaller divisor = more particles | Larger = fewer
-```
-
----
-
-## ⚙️ How It Works
-
-### Clock Engine
-```
-setInterval(tick, 1000)
-  ├── Digital: update textContent
-  ├── Analog:  rotate SVG hand elements via transform attribute
-  ├── Flip:    compare new vs old digit, trigger CSS 3D flip animation
-  ├── World:   call toLocaleTimeString() with each IANA timezone
-  ├── Alarms:  check all enabled alarms for HH:MM match at :00 seconds
-  └── Chime:   fire Zen Bell on hour if enabled and hour changed
-```
-
-### Audio Pipeline (Web Audio API)
-```
-OscillatorNode → BiquadFilterNode → GainNode → AudioContext.destination
-```
-All tones, bells, and noise are synthesized in-browser — no external audio assets.
-
-### Particle System
-```
-requestAnimationFrame()
-  ├── Clear canvas
-  ├── For each particle:
-  │     ├── Apply mouse repulsion force (if within 100px)
-  │     ├── Apply velocity damping (× 0.985)
-  │     ├── Update position with wrap-around
-  │     └── Draw circle with theme color
-  └── Draw connection lines between particles < 120px apart
-```
-
-### PWA Offline Strategy
-Service Worker uses a **Cache-First** strategy:
-1. Check cache → serve if found
-2. If not cached → fetch from network → cache the response
-3. If network fails and not cached → return "Offline" fallback
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please:
-
-1. **Fork** the repository
-2. Create a branch: `git checkout -b feature/your-feature-name`
-3. Commit changes: `git commit -m 'Add: your feature description'`
-4. Push: `git push origin feature/your-feature-name`
-5. Open a **Pull Request**
-
-### Ideas Welcome
-- More world clock cities selector
-- Google Calendar integration
-- Moon phase widget
-- Sunrise / Sunset countdown
-- More white noise types (café, library, thunderstorm)
-- Additional achievement badges
-- Full Hindi language (i18n) support
-- Animated SVG analog clock themes (dark, wooden, minimal)
+### 🛠️ Technical Improvements
+- [ ] **Better PWA Icons** — Custom clock icon for home screen
+- [ ] **Faster Load** — Lazy loading for audio modules
+- [ ] **IndexedDB** — For larger data storage than localStorage
+- [ ] **Web Workers** — Background timer accuracy improvement
+- [ ] **Accessibility** — Full ARIA support for screen readers
 
 ---
 
 ## 📄 License
 
-© PrahladEmbedX---All Rights Reserved.
+```
+Copyright (c) 2026 prahladembedx. All Rights Reserved.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CHRONO Ultra is a personal project created with passion
+by prahladembedx. While this project is publicly visible
+for inspiration and learning purposes only, all rights to
+the code, design, and concept are reserved by the author.
+
+Copying, redistribution, or commercial use of this project
+without written permission from the author is not allowed.
+
+If you'd like to collaborate or have any questions,
+feel free to reach out — always open to a good conversation!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+GitHub  : https://github.com/prahladembedx
+Project : https://prahladembedx.github.io/CHRONO-Ultra/
+
+        "Built with passion, protected with purpose."
+                              — prahladembedx, 2026
+```
+
+---
 
 ## 🙏 Credits
 
 | Resource | Usage |
 |----------|-------|
-| [Open-Meteo](https://open-meteo.com/) | Free weather API — no key required |
-| [Unsplash](https://unsplash.com/) | Random nature background images |
+| [Open-Meteo](https://open-meteo.com/) | Free weather API |
 | [Google Fonts](https://fonts.google.com/) | Orbitron, Space Mono, Playfair Display, Sora |
 | Web Audio API | All sounds synthesized — zero audio files |
-| Web Platform APIs | Geolocation, Battery, Wake Lock, Speech, Fullscreen |
+| Web Platform APIs | Geolocation, Battery, Wake Lock, Speech, Notifications |
 
 ---
 
 <div align="center">
 
-Runs on the bare Web Platform.
-If you ❤️ this, drop a ⭐ on the repo!
-⭐ **Star this repo** if CHRONO helped you stay focused!
+Built with ❤️ by **prahladembedx**
+
+⭐ **Star this repo** if CHRONO helped you stay productive!
 
 </div>
