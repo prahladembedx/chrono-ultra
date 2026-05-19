@@ -1,12 +1,13 @@
-/* CHRONO Ultra v3 — Service Worker */
+/* CHRONO Ultra — Service Worker v3 */
 const CACHE = 'chrono-v3';
 const ASSETS = [
   './',
   './index.html',
   './manifest.json',
+  './icon-192.png',
+  './icon-512.png',
 ];
 
-// Install — cache all assets
 self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(CACHE)
@@ -16,7 +17,6 @@ self.addEventListener('install', e => {
   self.skipWaiting();
 });
 
-// Activate — delete old caches
 self.addEventListener('activate', e => {
   e.waitUntil(
     caches.keys().then(keys =>
@@ -28,7 +28,6 @@ self.addEventListener('activate', e => {
   self.clients.claim();
 });
 
-// Fetch — cache first, then network
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
   if (!e.request.url.startsWith('http')) return;
