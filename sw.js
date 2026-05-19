@@ -1,5 +1,5 @@
-/* CHRONO Ultra v2 — Service Worker */
-const CACHE = 'chrono-v2';
+/* CHRONO Ultra v3 — Service Worker */
+const CACHE = 'chrono-v3';
 const ASSETS = [
   './',
   './index.html',
